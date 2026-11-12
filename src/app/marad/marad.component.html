@@ -1,0 +1,19 @@
+<p>{{klass}} is the best</p>
+<button (click)="showMsg()">event binding</button>
+
+<div style="background-color:red;">property binding</div>
+
+<div [style.background-color]="getColor()">property binding</div>
+<hr>
+<input type="text" [(ngModel)]="color">
+<div [style.background-color]="color">two way binding</div>
+<div *ngFor="let st of students">
+    <div *ngIf="st.age>25">
+{{st.id}}
+{{st.name}}
+{{st.surname}}
+{{st.age}}
+<a routerLink="/detail/{{st.id}}">detail</a>
+<a [routerLink]="['/detail',st.id]">detail2</a>
+</div>
+</div>
