@@ -1,5 +1,5 @@
 
-<form #f="ngForm">
+<form #f="ngForm" (ngSubmit)="showForm(f.value)">
 <label>name</label>
 <input type="text" name="name" ngModel required minlength="3" #n="ngModel">
 <div *ngIf="n.invalid">
@@ -17,7 +17,7 @@ minlength
 <div *ngIf="age.invalid">
 pattern
 </div>
-<input type="submit" value="send"  (click)="showForm(f.value)">
+<input type="submit" value="send"  (click)="showData(f.value)">
 </form>
 <div *ngFor="let u of users">
 {{u.name}}

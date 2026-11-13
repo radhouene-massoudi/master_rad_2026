@@ -7,7 +7,7 @@ import { Users } from '../../model/user';
   styleUrl: './adduser.component.css'
 })
 export class AdduserComponent {
-  users=[] as any
+  users:Users[]=[]
 
 showForm(f:any){
   console.log(f)
