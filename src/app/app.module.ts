@@ -10,6 +10,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { NavComponent } from './nav/nav.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailComponent } from './detail/detail.component';
+import { AdduserComponent } from './adduser/adduser.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { DetailComponent } from './detail/detail.component';
     NotfoundComponent,
     NavComponent,
     ContactComponent,
-    DetailComponent
+    DetailComponent,
+    AdduserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+
+<form #f="ngForm">
+<label>name</label>
+<input type="text" name="name" ngModel required minlength="3" #n="ngModel">
+<div *ngIf="n.invalid">
+<div *ngIf="n.errors?.['required']">
+required
+</div>
+<div *ngIf="n.errors?.['minlength']">
+minlength
+</div>
+</div>
+<label>surname</label>
+<input type="text" name="surname" ngModel>
+<label>age</label>
+<input type="text" name="age" ngModel pattern="[0-9]*" #age="ngModel">
+<div *ngIf="age.invalid">
+pattern
+</div>
+<input type="submit" value="send"  (click)="showForm(f.value)">
+</form>
+<div *ngFor="let u of users">
+{{u.name}}
+{{u.surname}}
+{{u.age}}
+</div>
